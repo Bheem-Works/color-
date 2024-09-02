@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Theme Switcher</title>
+    <style id="theme-style">
+        /* Default Light Theme */
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Switch Theme</button>
+    <p>Hello, this is a sample text to demonstrate theme switching!</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleButton = document.getElementById('theme-toggle');
+            const themeStyle = document.getElementById('theme-style');
+
+            themeToggleButton.addEventListener('click', () => {
+                // Toggle between light and dark themes
+                if (themeStyle.innerHTML.includes('background-color: white;')) {
+                    themeStyle.innerHTML = `
+                        body {
+                            background-color: black;
+                            color: white;
+                            transition: background-color 0.3s, color 0.3s;
+                        }
+                    `;
+                } else {
+                    themeStyle.innerHTML = `
+                        body {
+                            background-color: white;
+                            color: black;
+                            transition: background-color 0.3s, color 0.3s;
+                        }
+                    `;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
