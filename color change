@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="colorchange('Black')">Black</button>
+    <button onclick="colorchange('white')">white</button>
+<p id="grace">This font can change </p>
+<script>
+    function colorchange(color) {
+        document.body.style.backgroundColor=color;
+         
+        // variable
+        let paragraph = document.getElementById('grace');
+        if (color==='Black') {
+            paragraph.style.color='white';
+        } else {
+            paragraph.style.color='Black';
+        }
+    }
+</script>
+</body>
+</html>
